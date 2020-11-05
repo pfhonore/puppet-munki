@@ -28,11 +28,11 @@ class munki::local_only_manifest (
     'managed_uninstalls' => $managed_uninstalls
   }
 
-  file {"/Library/Managed Installs/manifests/${manifest_name}":
-    ensure  => $ensure,
-    mode    => '0644',
-    owner   => 0,
-    group   => 0,
-    content => plist($file_content)
-  }
+#  file {"/Library/Managed Installs/manifests/${manifest_name}":
+#    ensure  => $ensure,
+#    mode    => '0644',
+#    owner   => 0,
+#    group   => 0,
+#    content => plist($file_content)
+#  }
 }
